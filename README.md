@@ -1,4 +1,4 @@
-# DB3Project
+# Online Store
 				User-friendly description
 •	 Idea: We decided to create Online Store.
 
