@@ -19,4 +19,7 @@ o	Backend: PHP
 o	Database server: APACHE
 o	Database: Oracle
 
- During the process some changes can take place, because of dataset, while learning and team member’s choices and skills. 
+Dataset description: 
+All the 6 tables have 5000 columns each. There are 6 relations with different table attributes.
+
+During the process some changes can take place, because of dataset, while learning and team member’s choices and skills. 
