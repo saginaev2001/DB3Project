@@ -1,0 +1,1 @@
+SELECT AVG(price) FROM products GROUP BY price;

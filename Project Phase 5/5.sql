@@ -1,0 +1,1 @@
+SELECT category_id, count(category_id) FROM product_category group by category_id;

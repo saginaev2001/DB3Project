@@ -1,0 +1,1 @@
+select max(price),min(price),avg(price), stddev(price) from products where price>100000;
