@@ -1,0 +1,18 @@
+Questions
+1)What is the description, category_name of product 1002?
+2) What is the most popular item ordered?
+3) What is the average price of items?
+4) What is total amount of money of orders made by customer lives on address “Butcher Hill, West Park, LEEDS, LS16 5EA”?
+5) What is the most popular category_id?
+6) Find amount of totally spent money of? 
+7)Which customer bought the product with the lowest price? Enter the customer's phone number
+8)Who bought the most expensive product? Enter the address_id of the client 
+9)What is the address, phone number, and product name of the purchased customer under the phone number 1 132 640 450?
+10) How many customers bought the product_name "Capacitor Electric Double Layer-Supercaps"?
+11) How many products did “Sally Clark” buy from the “Speakers” category?
+12) Find the top 5 products that have a large quantity in our warehouse?
+13) What will be the most expensive product that has the description "Electronics, Computers, Computer Accessories, Keyboards, Mice & Joysticks, Keyboards" also the search should be from 1 to 2000 id?
+14) Find the maximum, minimum, total amount, average value, standard deviation of prices that are greater than 100000?
+15) Which product is the most popular in our store and which has a cost of more than 150000?
+16) Find products and their categories that have the description "TV & Video, Media Streaming Players, New Technology, Frys, Electronics, Streaming Media Players" also that have prices in the range of 100000 to 300000?
+
