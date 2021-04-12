@@ -1,0 +1,44 @@
+/*1 part*/
+Select COUNT(*) 
+FROM Customer, category, product_category, product, 
+WHERE Customer.store_id=Category.store_id 
+AND Category.category_id = Product_category.category_id    
+AND Product_category.product_id=Product.product_id 
+AND Product.price=(select Min(price) from Products);
+
+/*2 part*/
+Select COUNT(*) 
+FROM Customer, category, product_category, product 
+WHERE  Category.category_id = Product_category.category_id    
+AND Customer.store_id=Category.store_id   
+AND Product_category.product_id=Product.product_id 
+AND Product.price=(select Min(price) from Products);
+
+Select COUNT(*) 
+FROM Customer, category, product_category, product 
+WHERE Product_category.product_id=Product.product_id 
+AND Product.price=(select Min(price) from Products) 
+AND Category.category_id = Product_category.category_id 
+AND Customer.store_id=Category.store_id;
+
+Select COUNT(*) 
+FROM Customer, category, product_category, product 
+WHERE Customer.store_id=Category.store_id 
+AND Product_category.product_id=Product.product_id 
+AND Product.price=(select Min(price) from Products)
+AND Category.category_id = Product_category.category_id;
+
+/*Part 3*/
+|T'|=5001+5000+5000=150001
+|T'|=5000+5001+5000=150001
+|T'|=5000+5000+5001=150001
+
+/*Part 4*/
+(5001*4999*5000*5000)/(4999*4999*5000)=5002
+(4999*5001*5000*5000)/(4999*5000*5000)=5001
+(5001*5000*5000*4999)/(5000*5000*4999)=5001
+
+/*Part 5*/
+0.007997751235961914 seconds
+0.010999202728271484 seconds
+0.009017229080200195 seconds

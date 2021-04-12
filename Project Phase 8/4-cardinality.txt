@@ -1,0 +1,48 @@
+--1
+Select COUNT(*)
+FROM Address, customer, Customer, address, category, product_category
+WHERE Address.customer_id=Customer.customer_id 
+AND Customer.store_id=Category.store_id 
+AND Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND Customer.phone='1 132 640 450';
+
+--2
+Select COUNT(*)
+FROM Address, customer, Customer, address, category, product_category
+WHERE Product_category.product_id=Products.product_id 
+AND Address.customer_id=Customer.customer_id 
+AND Customer.store_id=Category.store_id 
+AND Category.category_id=Product_category.category_id 
+AND Customer.phone='1 132 640 450';
+
+Select COUNT(*)
+FROM Address, customer, Customer, address, category, product_category
+WHERE Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND Address.customer_id=Customer.customer_id 
+AND Customer.store_id=Category.store_id 
+AND Customer.phone='1 132 640 450';
+
+Select COUNT(*)
+FROM Address, customer, Customer, address, category, product_category
+WHERE Customer.store_id=Category.store_id 
+AND Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND Address.customer_id=Customer.customer_id 
+AND Customer.phone='1 132 640 450';
+
+/*Part 3*/
+|T'|=5000+5001+4999+257=15257
+|T'|=257+5001+4999+257=10514
+|T'|=5000+257+4999+257=10513
+
+/*Part 4*/
+(5000*5001*4999*257)/(5000*4999*257)=5001
+(257*5001*4999*257)/(257*2550*257)=9804
+(5000*257*4999*257)/(257*4999*257)=5000
+
+/*Part 5*/
+0.010999202728271484 seconds
+0.017997751235961914 seconds
+0.009017229080200195 seconds

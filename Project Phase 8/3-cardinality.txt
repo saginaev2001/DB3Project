@@ -1,0 +1,48 @@
+--1
+Select COUNT(*)
+FROM Address, customer, category, produt_category, products
+WHERE  Address.customer_id=Customer.customer_id 
+AND Customer.store_id=Category.store_id 
+AND Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND Products.price=(select Max(price) from Products);
+
+--2
+Select COUNT(*)
+FROM Address, customer, category, produt_category, products 
+WHERE Product_category.product_id=Products.product_id 
+AND  Address.customer_id=Customer.customer_id 
+AND Customer.store_id=Category.store_id 
+AND Category.category_id=Product_category.category_id
+AND Products.price=(select Max(price) from Products);
+
+Select COUNT(*)
+FROM Address, customer, category, produt_category, products
+WHERE Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND  Address.customer_id=Customer.customer_id 
+AND Customer.store_id=Category.store_id 
+AND Products.price=(select Max(price) from Products);
+
+Select COUNT(*)
+FROM Address, customer, category, produt_category, products
+WHERE Customer.store_id=Category.store_id  
+AND Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND Address.customer_id=Customer.customer_id
+AND Products.price=(select Max(price) from Products);
+
+/*Part 3*/
+|T'|=5000+5001+5001+5000=20002
+|T'|=5000+5000+5001+5001=20002
+|T'|=5001+5000+5000+5001=20002
+
+/*Part 4*/
+(5000*5001*4999*5000*5000)/(5000*4999*4999*5000)=5002
+(5000*5000*5001*4999*5000)/(5000*5000*4999*4999)=5002
+(5000*5000*5000*5001*4999)/(5000*5000*5000*4999)=5001
+
+/*Part 5*/
+0.010999202728271484 seconds
+0.007997751235961914 seconds
+0.009017229080200195 seconds

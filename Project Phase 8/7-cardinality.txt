@@ -1,0 +1,44 @@
+--1
+select COUNT(*) 
+from products, product_description, product_category, category
+WHERE p.product_id = d.product_id 
+AND pc.product_id = p.product_id  
+AND pc.category_id=c.category_id 
+AND d.description='TV & Video, Media Streaming Players, New Technology, Frys, Electronics, Streaming Media Players' AND  p.price between 100000 and 300000;
+
+--2
+select COUNT(*) 
+from products, product_description, product_category, category
+WHERE pc.category_id=c.category_id 
+AND p.product_id = d.product_id 
+AND pc.product_id = p.product_id 
+AND d.description='TV & Video, Media Streaming Players, New Technology, Frys, Electronics, Streaming Media Players' AND  p.price between 100000 and 300000;
+
+select COUNT(*) 
+from products, product_description, product_category, category
+WHERE pc.product_id = p.product_id 
+AND pc.category_id=c.category_id 
+AND p.product_id = d.product_id 
+AND d.description='TV & Video, Media Streaming Players, New Technology, Frys, Electronics, Streaming Media Players' AND  p.price between 100000 and 300000;
+
+select COUNT(*) 
+from products, product_description, product_category, category
+WHERE p.product_id = d.product_id 
+AND pc.product_id = p.product_id 
+AND pc.category_id=c.category_id 
+AND d.description='TV & Video, Media Streaming Players, New Technology, Frys, Electronics, Streaming Media Players' AND  p.price between 100000 and 300000;
+
+/*Part 3*/
+|T'|=5000+5001+4999+612=15612
+|T'|=612+5001+4999+612=11224
+|T'|=5000+612+4999+612=10868
+
+/*Part 4*/
+(5000*5001*4999*5000)/(5000*4999*257)=97296
+(4999*5001*4999*5001)/(257*2550*257)=3710851
+(5000*5000*4999*5001)/(257*4999*257)=1892912
+
+/*Part 5*/
+0.010999202728271484 seconds
+0.017997751235961914 seconds
+0.019017229080200195 seconds

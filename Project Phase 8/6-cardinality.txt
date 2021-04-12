@@ -1,0 +1,43 @@
+--1
+Select Count(*) 
+from Products, Product_category, Category
+WHERE  Products.product_id=Product_category.product_id 
+AND Product_category.category_id=Category.category_id 
+AND category.category_name='Speakers' 
+AND products.product_name='Sally Clark';
+
+--2
+Select Count(*) 
+from Products, Product_category, Category
+WHERE category.category_name='Speakers' 
+AND Products.product_id=Product_category.product_id 
+AND Product_category.category_id=Category.category_id 
+AND products.product_name='iHome Rechargeable Splash Proof Stereo Bluetooth Speaker - Black (IBT33BC)';
+
+Select Count(*) 
+from Products, Product_category, Category
+WHERE Product_category.category_id=Category.category_id 
+AND category.category_name='Speakers' 
+AND Products.product_id=Product_category.product_id 
+AND products.product_name='iHome Rechargeable Splash Proof Stereo Bluetooth Speaker - Black (IBT33BC)';
+
+Select Count(*) from Products, Product_category, Category
+WHERE Products.product_id=Product_category.product_id 
+AND Product_category.category_id=Category.category_id 
+AND category.category_name='Speakers' 
+AND products.product_name='iHome Rechargeable Splash Proof Stereo Bluetooth Speaker - Black (IBT33BC)';
+
+/*Part 3*/
+|T'|=5000+5001+54+4999=15054
+|T'|=612+5001+62+4999+62=10736
+|T'|=5000+62+4999+62=10123
+
+/*Part 4*/
+(5000*5001*4999*5000)/(5000*4999*122)=204959
+(4999*5001*4999*5001)/(257*2550*257)=3710851
+(5000*5000*4999*5001)/(257*4999*257)=1892912
+
+/*Part 5*/
+0.010999202728271484 seconds
+0.017997751235961914 seconds
+0.012017229080200195 seconds

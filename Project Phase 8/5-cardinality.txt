@@ -1,0 +1,44 @@
+--1
+Select Count(*) 
+FROM Customer,Category,Product_category,Products 
+WHERE Customer.store_id=Category.store_id 
+AND Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND Products.product_name='Capacitor Electric Double Layer-Supercaps';
+
+--2
+Select Count(*) 
+FROM Customer,Category,Product_category,Products 
+WHERE Product_category.product_id=Products.product_id 
+AND Customer.store_id=Category.store_id 
+AND Category.category_id=Product_category.category_id 
+AND Products.product_name='Microsoft Surface Pro 4 Type Cover with Fingerprint ID';
+
+Select Count(*) 
+FROM Customer,Category,Product_category,Products 
+WHERE Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND Customer.store_id=Category.store_id 
+AND Products.product_name='Microsoft Surface Pro 4 Type Cover with Fingerprint ID';
+
+Select Count(*) 
+FROM Customer,Category,Product_category,Products 
+WHERE Customer.store_id=Category.store_id 
+AND Category.category_id=Product_category.category_id 
+AND Product_category.product_id=Products.product_id 
+AND Products.product_name='Microsoft Surface Pro 4 Type Cover with Fingerprint ID';
+
+/*Part 3*/
+|T'|=5000+5001+4999+612=15612
+|T'|=612+5001+4999+612=11224
+|T'|=5000+612+4999+612=10868
+
+/*Part 4*/
+(5000*5001*4999*5000)/(5000*4999*257)=97296
+(4999*5001*4999*5001)/(257*2550*257)=3710851
+(5000*5000*4999*5001)/(257*4999*257)=1892912
+
+/*Part 5*/
+0.010999202728271484 seconds
+0.017997751235961914 seconds
+0.019017229080200195 seconds
