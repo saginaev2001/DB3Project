@@ -1,0 +1,55 @@
+/*1 part*/
+SELECT COUNT(*) 
+FROM products,product_category,category,customer,address 
+WHERE products.product_id=product_category.product_id AND 
+product_category.category_id = category.category_id AND 
+  category.store_id = customer.store_id AND customer.customer_id = address.customer_id 
+  AND address.address_name = 'Butcher Hill, West Park, LEEDS, LS16 5EA';
+
+/*2 part*/
+SELECT COUNT(*) 
+FROM products,product_category,category,customer,address 
+WHERE product_category.category_id = category.category_id 
+AND category.store_id = customer.store_id AND customer.customer_id = address.customer_id 
+AND address.address_name = 'Butcher Hill, West Park, LEEDS, LS16 5EA' 
+AND products.product_id=product_category.product_id;
+
+SELECT COUNT(*) 
+FROM products,product_category,category,customer,address 
+WHERE category.store_id = customer.store_id AND customer.customer_id = address.customer_id 
+AND address.address_name = 'Butcher Hill, West Park, LEEDS, LS16 5EA' 
+AND products.product_id=product_category.product_id
+AND product_category.category_id = category.category_id;
+
+SELECT COUNT(*) 
+FROM products,product_category,category,customer,address 
+WHERE customer.customer_id = address.customer_id 
+AND address.address_name = 'Butcher Hill, West Park, LEEDS, LS16 5EA' 
+AND products.product_id=product_category.product_id
+AND product_category.category_id = category.category_id
+AND category.store_id = customer.store_id;
+
+/*3 part*/
+
+|T'|=5000+5001+5000+257+257=15515
+|T'|=257+257+257+4999+5001=10771
+|T'|=257+5000+5000+257+257=10771
+
+
+/*4 part*/
+(5000*4999*5000*5000)/(4999*4999*5000)=5001
+(5001*5000*5000*4999)/(5000*5000*4999)=5001
+(5000*5000*5001*4999)/(5000*5001*4999)=5000
+
+/*5 part*/
+0.009017229080200195 seconds
+0.010999202728271484 seconds
+0.007997751235961914 seconds
+
+
+
+
+
+
+
+
