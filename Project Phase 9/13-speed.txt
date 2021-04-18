@@ -1,0 +1,19 @@
+Query: 
+	SELECT * FROM (select product_name,price 
+		       from products p 
+                       left join product_description d on p.product_id = d.product_id
+                       where d.description='Electronics, Computers,Computer Accessories,Keyboards,Mice & Joysticks, Keyboards'
+                       and p.product_id between 1 and 200 order by p.price desc ) A
+	WHERE rownum <= 1;
+
+
+Speed Tests:
+	1)0.004 
+	2)0.003 
+	3)0.003 
+	4)0.003 
+	5)0.004 
+	
+	Average:0.0034
+
+Explain plan stored in "explain" folder. 

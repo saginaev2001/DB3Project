@@ -1,0 +1,18 @@
+Query: 
+	Select Count(customer_id) FROM Customer 
+	JOIN Category on Customer.store_id=Category.store_id 
+	JOIN Product_category on Category.category_id=Product_category.category_id 
+	JOIN Products on Product_category.product_id=Products.product_id
+	WHERE Products.product_name='Capacitor Electric Double Layer-Supercaps';
+
+
+Speed Tests:
+	1)0.002 
+	2)0.003 
+	3)0.002 
+	4)0.002 
+	5)0.003 
+
+	Average:0.0024 
+
+Explain plan stored in "explain" folder. 

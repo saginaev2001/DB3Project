@@ -1,0 +1,18 @@
+Query: 
+	Select phone 
+	FROM Customer 
+	JOIN Category on Customer.store_id=Category.store_id 
+	JOIN Product_category on Category.category_id = Product_category.category_id    
+	JOIN Products on Product_category.product_id=Product.product_id 
+	WHERE Product.price=(select Min(price) from Products);
+
+Speed Tests:
+	1)1.003 
+	2)0.007 
+	3)0.007 
+	4)0.007 
+	5)0.008 
+
+	Average: 1.0256
+
+Explain plan stored in "explain" folder. 

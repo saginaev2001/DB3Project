@@ -1,0 +1,20 @@
+Query: 
+	Select address_id 
+	FROM Address 
+	JOIN Customer on Address.customer_id=Customer.customer_id 
+	JOIN Category on Customer.store_id=Category.store_id 
+	JOIN Product_category on Category.category_id=Product_category.category_id 
+	JOIN Products on Product_category.product_id=Products.product_id 
+	WHERE Products.price=(select Max(price) from Products);
+
+
+Speed Tests:
+	1)0.062 
+	2)0.011 
+	3)0.007 
+	4)0.001 
+	5)0.008
+
+	Average: 0.0178
+
+Explain plan stored in "explain" folder. 
